@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>捐款排名</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th></th>
+        <th>名字</th>
+        <th>大本级别</th>
+        <th>捐</th>
+        <th>收</th>
+    </tr>
+    <tr th:each="user : ${list}">
+        <td><img height="25" width="25" th:src="${user.smallUrl}"/></td>
+        <td th:text="${user.name}">NULL</td>
+        <td th:text="${user.userLevel}">NULL</td>
+        <td th:text="${user.donations}">0</td>
+        <td th:text="${user.donationsReceived}">0</td>
+    </tr>
+</table>
+
+</body>
+</html>
